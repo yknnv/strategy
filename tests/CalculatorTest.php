@@ -8,11 +8,11 @@
 
 use PHPUnit\Framework\TestCase;
 use Yknnv\Strategy\Calculator;
-
+use Yknnv\strategy\Exceptions\CalculateException;
 final class CalculatorTest extends TestCase
 {
     /**
-     * @throws Exception
+     * @throws CalculateException
      */
     public function testPlusTwoNumbers(): void
     {
@@ -27,7 +27,7 @@ final class CalculatorTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws CalculateException
      */
     public function testSubsTwoNumbers(): void
     {
@@ -42,7 +42,7 @@ final class CalculatorTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws CalculateException
      */
     public function testMultTwoNumbers(): void
     {
@@ -57,12 +57,12 @@ final class CalculatorTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws CalculateException
      */
     public function testDivsByZero(): void
     {
         $sum = new Calculator('/');
-        $this->expectException(\Exception::class);
+        $this->expectException(CalculateException::class);
         $a = 324;
         $b = 0;
         $sum->calc($a, $b);

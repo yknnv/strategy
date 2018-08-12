@@ -2,6 +2,13 @@
 
 namespace Yknnv\Strategy;
 
+use Yknnv\Strategy\Exceptions\CalculateException;
+use Yknnv\Strategy\Operations\DivsOperation;
+use Yknnv\Strategy\Operations\MultOperation;
+use Yknnv\Strategy\Operations\OperationInterface;
+use Yknnv\Strategy\Operations\PlusOperation;
+use Yknnv\Strategy\Operations\SubsOperation;
+
 class Calculator
 {
 
@@ -10,7 +17,7 @@ class Calculator
     /**
      * Calculator constructor.
      * @param string $operation
-     * @throws \Exception
+     * @throws CalculateException
      */
     public function __construct(string $operation)
     {
@@ -20,7 +27,7 @@ class Calculator
     /**
      * @param $operation
      * @return OperationInterface
-     * @throws \Exception
+     * @throws CalculateException
      */
     private function getStrategy($operation):OperationInterface
     {
@@ -30,7 +37,7 @@ class Calculator
             case '-': return new SubsOperation();
             case '*': return new MultOperation();
             case '/': return new DivsOperation();
-            default : throw new \Exception('Unknown operation');
+            default : throw new CalculateException('Unknown operation');
         }
     }
 

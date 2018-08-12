@@ -7,7 +7,7 @@
  * @author Yury Kononov <kononov@aeroidea.ru>
  */
 
-namespace Yknnv\Strategy;
+namespace Yknnv\Strategy\Operations;
 
 
 class PlusOperation implements OperationInterface
