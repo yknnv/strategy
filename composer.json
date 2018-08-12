@@ -1,0 +1,20 @@
+{
+    "name": "yknnv/strategy",
+    "description": "Simple calculator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yury Kononov",
+            "email": "kononov90@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yknnv\\": "src"
+        }
+    }
+}
