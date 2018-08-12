@@ -10,6 +10,8 @@
 namespace Yknnv\Strategy\Operations;
 
 
+use Yknnv\Strategy\Exceptions\CalculateException;
+
 class DivsOperation implements OperationInterface
 {
     /**
@@ -21,7 +23,7 @@ class DivsOperation implements OperationInterface
     public function calc(int $a, int $b): int
     {
         if(!$b)
-            throw new \Exception('Division by ZERO');
+            throw new CalculateException('Division by ZERO');
 
         return floor($a / $b);
     }

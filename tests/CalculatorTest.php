@@ -6,7 +6,7 @@
  * @author Yury Kononov <kononov@aeroidea.ru>
  */
 
-use PHPUnit\Framework\TestCase;
+use \PHPUnit\Framework\TestCase;
 use Yknnv\Strategy\Calculator;
 use Yknnv\strategy\Exceptions\CalculateException;
 final class CalculatorTest extends TestCase
