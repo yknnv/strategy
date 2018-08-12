@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+use Yknnv\Strategy\Calculator;
+
+require __DIR__.'/vendor/autoload.php';
+
+$plus = new Calculator("+");
+$mins = new Calculator("-");
+$mult = new Calculator("*");
+$divs = new Calculator("/");
+echo $plus -> calc(13, 7).PHP_EOL;
+echo $mins -> calc(13, 7).PHP_EOL;
+echo $mult -> calc(13, 7).PHP_EOL;
+echo $divs -> calc(13, 7).PHP_EOL;
